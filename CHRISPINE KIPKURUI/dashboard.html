@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #0f60da;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+</style>
+<div class="dashboard-container">
+    <header>
+        <h1 > DASHBOARD</h1>
+        <button class="logout-btn" onclick="logout()">Logout</button>
+    </header>
+    <main>
+        <div class="dashboard-buttons">
+            <button onclick="window.location.href='change_password.html'">Change Password</button>
+            <button onclick="window.location.href='order.html'">Make an Order</button>
+        </div>
+        <section class="dashboard-content">
+            <h2>Dashboard Overview</h2>
+            <p>Here you can access your account options, place new orders</p>
+        </section>
+    </main>
+</div>
+
+<script>
+    function logout() {
+        alert("You have been logged out.");
+        window.location.href = "login.html";  // Redirect to login page
+    }
+</script>
+
+</body>
+</html>

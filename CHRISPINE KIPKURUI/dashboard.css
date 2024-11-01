@@ -1,0 +1,78 @@
+/* CSS for the dashboard page */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f9fc;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.dashboard-container {
+    width: 90%;
+    max-width: 800px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+.logout-btn {
+    background-color: #13d1a8;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.logout-btn:hover {
+    background-color: #c82333;
+}
+
+.dashboard-buttons {
+    margin: 20px 0;
+}
+
+.dashboard-buttons button {
+    width: 100%;
+    max-width: 200px;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.dashboard-buttons button:hover {
+    background-color: #15cc52;
+}
+
+.dashboard-content {
+    margin-top: 20px;
+}
+
+.dashboard-content h2 {
+    color: #007bff;
+}
+
+.dashboard-content p {
+    color: #555;
+}

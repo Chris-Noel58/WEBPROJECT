@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+<div class="login-container">
+    <h2>Login</h2>
+    <form id="loginForm" action="javascript:void(0);" method="POST" onsubmit="loginUser(event)">
+        <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <button type="submit" class="login-btn">Login</button>
+    </form>
+    <p id="loginMessage" class="login-message"></p>
+</div>
+
+<script>
+    function loginUser(event) {
+        event.preventDefault();  // Prevents form submission
+
+        // Retrieve values from form fields
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+
+        // Example check (you can replace this with actual verification logic)
+        if (email && password) {
+            document.getElementById('loginMessage').textContent = "Login successful!";
+            
+            // Redirect to the next page
+            setTimeout(() => {
+                window.location.href = "dashboard.html";  // Replace "nextpage.html" with your desired page
+            }, 2000);
+        } else {
+            document.getElementById('loginMessage').textContent = "Invalid email or password.";
+        }
+    }
+</script>
+
+</body>
+</html>

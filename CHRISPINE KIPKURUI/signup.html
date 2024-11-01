@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #18cc96;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+</style>
+<div class="form-container">
+    <h2>Sign Up</h2>
+    <form id="registrationForm" action="#" method="POST" onsubmit="displayWelcomeMessage(event)">
+        <div class="form-group">
+            <label for="firstname" style="color: rgb(165, 72, 72);">First Name</label>
+            <input type="text" id="firstname" name="firstname" required>
+        </div>
+        <div class="form-group">
+            <label for="secondname" style="color: rgb(165, 72, 72);">Second Name</label>
+            <input type="text" id="secondname" name="secondname" required>
+        </div>
+        <div class="form-group">
+            <label for="email" style="color: rgb(165, 72, 72);">Email Address</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="contact" style="color: rgb(165, 72, 72);">Contact</label>
+            <input type="tel" id="contact" name="contact" required>
+        </div>
+        <div class="form-group">
+            <label for="password" style="color: rgb(165, 72, 72);">Password</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <button type="submit" class="submit-btn">Sign Up</button>
+    </form>
+    <p id="welcomeMessage" class="welcome-message"></p>
+</div>
+
+<script>
+    function displayWelcomeMessage(event) {
+        event.preventDefault();  
+        
+       
+        const firstName = document.getElementById('firstname').value;
+        const secondName = document.getElementById('secondname').value;
+
+        
+        const message = 'Hello, ' + firstName +' '+ secondName+ '. Welcome to my site,  Thank you for signing up. You can now log in';
+
+        
+        document.getElementById('welcomeMessage').textContent = message;
+
+        setTimeout(()=>{
+            window.location.href = "login.html";
+
+        },3000);
+       
+    }
+</script>
+    
+</body>
+</html>
